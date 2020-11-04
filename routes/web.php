@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 });
+Route::get('/characters', "HomeController@todos")->name('personagens');
+Route::get('/characters/{id}', "HomeController@detalhe");
+Route::post('/character', "HomeController@busca_personagem")->name("busca_personagem");
+Route::post('/comics', "HomeController@busca_comics")->name("comics");

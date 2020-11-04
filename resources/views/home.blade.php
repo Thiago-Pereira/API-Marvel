@@ -3,7 +3,7 @@
 
     <div class="container">
         <div class="show">
-            <a href="">
+            <a href="{{url('/')}}">
                 <img src="https://designconceitual.com.br/wp-content/uploads/2016/07/Marvel_Studios_logo.svg_.png"
                 style="width: 500px; margin:0 auto; padding: 10px 10px 10px 10px" alt="">
             </a>
@@ -12,7 +12,7 @@
         <div class="row" style="justify-content: center">
             <ul>
                 <li>
-                    <a href="" style="color: white">Ver Todos os Personagens</a>
+                <a href="{{route('personagens')}}" style="color: white">Ver Todos os Personagens</a>
                 </li>
                 <li>
                     <a id="busca" style="color: white">Realizar pesquisa de Personagem</a>
@@ -95,23 +95,23 @@
             <div class="accordion md-accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
 
                 <div class="row justify-content-center panel-collapse collapse show" data-parent="#accordionEx" id="Personagem">
-                    <form action="" method="post">
+                <form action="{{route('busca_personagem')}}" method="post">
                         @csrf
                         <div class="input-group" style="background-color: #d40317; flex-direction: unset;">
-                            <input type="text" class="form-control display-4" placeholder="Digite o Personagem">
+                            <input type="text" name="nome" class="form-control display-4" placeholder="Digite o Personagem">
                             <span class="input-group-append">
-                                <button class="btn btn-secondary display-4 mbr-fonts-style" type="button" id="btnBuscar"><i class="fas fa-search"></i></button>
+                                <button class="btn btn-secondary display-4 mbr-fonts-style" type="submit"><i class="fas fa-search"></i></button>
                             </span>
                         </div>
                     </form>
                 </div>
                 <div class="row justify-content-center panel-collapse collapse in" data-parent="#accordionEx" id="Comics">
-                    <form action="" method="post">
+                    <form action="{{route('comics')}}" method="post">
                         @csrf
                         <div class="input-group" style="background-color: #d40317; flex-direction: unset;">
-                            <input type="text" class="form-control display-4" placeholder="Digite o Quadrinho">
+                            <input type="text" class="form-control display-4" name="nome" id="nome_comics" placeholder="Digite o Personagem">
                             <span class="input-group-append">
-                                <button class="btn btn-secondary display-4 mbr-fonts-style" type="button" id="btnBuscar"><i class="fas fa-search"></i></button>
+                                <button class="btn btn-secondary display-4 mbr-fonts-style" type="submit" id="btnBuscarComics"><i class="fas fa-search"></i></button>
                             </span>
                         </div>
                     </form>
@@ -161,7 +161,7 @@
                 $("#search").show()
             });
 
-        })
+        });
     </script>
 
 @endsection
