@@ -21,3 +21,4 @@ Route::get('/characters/{id}', "HomeController@detalhe");
 Route::post('/character', "HomeController@busca_personagem")->name("busca_personagem");
 Route::post('/comics', "HomeController@busca_comics")->name("comics");
 Route::post('/events', "HomeController@busca_evento")->name("evento");
+Route::post('/serie', "HomeController@busca_serie")->name("serie");

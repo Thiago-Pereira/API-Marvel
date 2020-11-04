@@ -45,4 +45,15 @@ class HomeController extends Controller
         return view('events', compact('eventos'));
     }
 
+    public function busca_serie(Request $req) {
+        $series = DB::table('serie')
+        ->join('serie_characters', 'serie.ID', '=', 'serie_characters.ID_Serie')
+        ->join('characters', 'serie_characters.ID_Characters', '=', 'characters.ID')
+        ->where('characters.Nome', 'like', '%' . $req->nome . '%')
+        ->select('serie.*')
+        ->get();
+
+        return view('serie', compact('series'));
+    }
+
 }

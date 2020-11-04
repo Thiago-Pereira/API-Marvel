@@ -128,12 +128,12 @@
                     </form>
                 </div>
                 <div class="row justify-content-center panel-collapse collapse in" data-parent="#accordionEx" id="Serie">
-                    <form action="" method="post">
+                    <form action="{{route('serie')}}" method="post">
                         @csrf
                         <div class="input-group" style="background-color: #d40317; flex-direction: unset;">
-                            <input type="text" class="form-control display-4" placeholder="Digite a Série">
+                            <input type="text" name="nome" class="form-control display-4" placeholder="Digite a Série">
                             <span class="input-group-append">
-                                <button class="btn btn-secondary display-4 mbr-fonts-style" type="button" id="btnBuscar"><i class="fas fa-search"></i></button>
+                                <button class="btn btn-secondary display-4 mbr-fonts-style" type="submit"><i class="fas fa-search"></i></button>
                             </span>
                         </div>
                     </form>
