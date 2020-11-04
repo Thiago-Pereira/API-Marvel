@@ -117,12 +117,12 @@
                     </form>
                 </div>
                 <div class="row justify-content-center panel-collapse collapse in" data-parent="#accordionEx" id="Events">
-                    <form action="" method="post">
+                    <form action="{{route('evento')}}" method="post">
                         @csrf
                         <div class="input-group" style="background-color: #d40317; flex-direction: unset;">
-                            <input type="text" class="form-control display-4" placeholder="Digite o Evento">
+                            <input type="text" name="nome" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" class="form-control display-4" placeholder="Digite o Evento">
                             <span class="input-group-append">
-                                <button class="btn btn-secondary display-4 mbr-fonts-style" type="button" id="btnBuscar"><i class="fas fa-search"></i></button>
+                                <button class="btn btn-secondary display-4 mbr-fonts-style" type="submit"><i class="fas fa-search"></i></button>
                             </span>
                         </div>
                     </form>

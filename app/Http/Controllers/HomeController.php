@@ -34,4 +34,15 @@ class HomeController extends Controller
         return view('comics', compact('historias'));
     }
 
+    public function busca_evento(Request $req) {
+        $eventos = DB::table('event')
+        ->join('event_characters', 'event.ID', '=', 'event_characters.ID_Event')
+        ->join('characters', 'event_characters.ID_Characters', '=', 'characters.ID')
+        ->where('characters.Nome', 'like', '%' . $req->nome . '%')
+        ->select('event.*')
+        ->get();
+
+        return view('events', compact('eventos'));
+    }
+
 }

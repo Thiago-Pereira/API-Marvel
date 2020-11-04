@@ -13,15 +13,15 @@
 
     <div class="container">
         <div class="row">
-            @foreach ($historias as $historia)
+            @foreach ($eventos as $evento)
             <div class="col-lg-4 col-md-12" style="padding-bottom: 10px;">
                 <div class="card">
                     <div class="card-img" style="text-align: center">
-                        <img src="{{asset('image').'/'.$historia->Foto}}" title="{{$historia->Nome}}" alt="{{$historia->Nome}}" style="text-align: center; max-height: 286px; max-width: 183px">
+                        <img src="{{asset('image').'/'.$evento->Foto}}" title="{{$evento->Nome}}" alt="{{$evento->Nome}}" style="text-align: center; max-height: 286px; max-width: 183px">
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">{{$historia->Nome}}</h5>
-                        <p class="card-text" >{{$historia->Descricao}}</p>
+                        <h5 class="card-title">{{$evento->Nome}}</h5>
+                        <p class="card-text" >{{$evento->Descricao}}</p>
                     </div>
                 </div>
             </div>
