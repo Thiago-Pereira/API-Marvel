@@ -56,4 +56,15 @@ class HomeController extends Controller
         return view('serie', compact('series'));
     }
 
+    public function busca_historia(Request $req) {
+        $historias = DB::table('storie')
+        ->join('storie_characters', 'storie.ID', '=', 'storie_characters.ID_Storie')
+        ->join('characters', 'storie_characters.ID_Characters', '=', 'characters.ID')
+        ->where('characters.Nome', 'like', '%' . $req->nome . '%')
+        ->select('storie.*')
+        ->get();
+
+        return view('storie', compact('historias'));
+    }
+
 }

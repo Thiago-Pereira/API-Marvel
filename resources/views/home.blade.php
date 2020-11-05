@@ -37,7 +37,7 @@
                     data-parent="#accordionEx"
                     style="border-radius: 40px;  margin: .4rem .8rem;"
                 >
-                        Por Personagem
+                        Por Personagem Específico
                 </button>
                 <button
                     class="btn btn-primary col-lg-5 display-7"
@@ -49,7 +49,7 @@
                     data-parent="#accordionEx"
                     style="border-radius: 40px;  margin: .4rem .8rem;"
                 >
-                        Por Quadrinho
+                        Personagem por Quadrinho
                 </button>
                 <button
                     class="btn btn-primary col-lg-5 display-7"
@@ -61,7 +61,7 @@
                     data-parent="#accordionEx"
                     style="border-radius: 40px;  margin: .4rem .8rem;"
                 >
-                        Por Evento
+                        Personagem por Evento
                 </button>
                 <button
                     class="btn btn-primary col-lg-5 display-7"
@@ -73,7 +73,7 @@
                     data-parent="#accordionEx"
                     style="border-radius: 40px;  margin: .4rem .8rem;"
                 >
-                        Por Série
+                        Personagem por Série
                 </button>
                 <button
                     class="btn btn-primary col-lg-5 display-7"
@@ -85,7 +85,7 @@
                     data-parent="#accordionEx"
                     style="border-radius: 40px; margin: .4rem .8rem;"
                 >
-                        Por História
+                        Personagem por História
                 </button>
             </div>
         </div>
@@ -98,7 +98,7 @@
                 <form action="{{route('busca_personagem')}}" method="post">
                         @csrf
                         <div class="input-group" style="background-color: #d40317; flex-direction: unset;">
-                            <input type="text" name="nome" class="form-control display-4" placeholder="Digite o Personagem">
+                            <input type="text" name="nome" class="form-control display-4" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" placeholder="Digite o Personagem">
                             <span class="input-group-append">
                                 <button class="btn btn-secondary display-4 mbr-fonts-style" type="submit"><i class="fas fa-search"></i></button>
                             </span>
@@ -109,9 +109,9 @@
                     <form action="{{route('comics')}}" method="post">
                         @csrf
                         <div class="input-group" style="background-color: #d40317; flex-direction: unset;">
-                            <input type="text" class="form-control display-4" name="nome" id="nome_comics" placeholder="Digite o Personagem">
+                            <input type="text" class="form-control display-4" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" name="nome" id="nome_comics" placeholder="Digite o Personagem">
                             <span class="input-group-append">
-                                <button class="btn btn-secondary display-4 mbr-fonts-style" type="submit" id="btnBuscarComics"><i class="fas fa-search"></i></button>
+                                <button class="btn btn-secondary display-4 mbr-fonts-style" type="submit"><i class="fas fa-search"></i></button>
                             </span>
                         </div>
                     </form>
@@ -120,7 +120,7 @@
                     <form action="{{route('evento')}}" method="post">
                         @csrf
                         <div class="input-group" style="background-color: #d40317; flex-direction: unset;">
-                            <input type="text" name="nome" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" class="form-control display-4" placeholder="Digite o Evento">
+                            <input type="text" name="nome" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" class="form-control display-4" placeholder="Digite o Personagem">
                             <span class="input-group-append">
                                 <button class="btn btn-secondary display-4 mbr-fonts-style" type="submit"><i class="fas fa-search"></i></button>
                             </span>
@@ -131,7 +131,7 @@
                     <form action="{{route('serie')}}" method="post">
                         @csrf
                         <div class="input-group" style="background-color: #d40317; flex-direction: unset;">
-                            <input type="text" name="nome" class="form-control display-4" placeholder="Digite a Série">
+                            <input type="text" name="nome" class="form-control display-4" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" placeholder="Digite o Personagem">
                             <span class="input-group-append">
                                 <button class="btn btn-secondary display-4 mbr-fonts-style" type="submit"><i class="fas fa-search"></i></button>
                             </span>
@@ -139,12 +139,12 @@
                     </form>
                 </div>
                 <div class="row justify-content-center panel-collapse collapse in" data-parent="#accordionEx" id="Stories">
-                    <form action="" method="post">
+                    <form action="{{route('storie')}}" method="post">
                         @csrf
                         <div class="input-group" style="background-color: #d40317; flex-direction: unset;">
-                            <input type="text" class="form-control display-4" placeholder="Digite a História">
+                            <input type="text" name="nome" class="form-control display-4" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" placeholder="Digite o Personagem">
                             <span class="input-group-append">
-                                <button class="btn btn-secondary display-4 mbr-fonts-style" type="button" id="btnBuscar"><i class="fas fa-search"></i></button>
+                                <button class="btn btn-secondary display-4 mbr-fonts-style" type="submit"><i class="fas fa-search"></i></button>
                             </span>
                         </div>
                     </form>
