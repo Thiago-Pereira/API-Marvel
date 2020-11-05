@@ -19,16 +19,16 @@ Estará disponível em: http://127.0.0.1:8000/
 ## Tela Inicial
 Tela onde pode ir atrás de todos os personagens ou buscar personagem pelo nome, pode buscar os quadrinhos, eventos, séries e histórias que o personagem está relacionado
 
-![](https://github.com/Thiago-Pereira/API-Marvel/blob/master/public/images/screenshot.png)
+![](https://github.com/Thiago-Pereira/API-Marvel/blob/master/public/image/screenshot.png)
 
 ## Demais Telas
 Todas as outras telas elaboradas, aqui tem as telas de todos os personagens, tela de detalhes do personagem, tela de busca de quadrinhos, eventos, séries e histórias do personagem.
 
-![](https://github.com/Thiago-Pereira/API-Marvel/blob/master/public/images/screenshot2.png)
+![](https://github.com/Thiago-Pereira/API-Marvel/blob/master/public/image/screenshot2.png)
 
-![](https://github.com/Thiago-Pereira/API-Marvel/blob/master/public/images/screenshot3.png)
+![](https://github.com/Thiago-Pereira/API-Marvel/blob/master/public/image/screenshot3.png)
 
-![](https://github.com/Thiago-Pereira/API-Marvel/blob/master/public/images/screenshot4.png)
+![](https://github.com/Thiago-Pereira/API-Marvel/blob/master/public/image/screenshot4.png)
 ## Rotas
 
 / - Página Inicial
