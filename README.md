@@ -8,7 +8,7 @@ Para instalar as dependências:
 
 `composer install`
 
-Importe o arquivo `.dump` que se encontra na pasta raiz do projeto em seu banco de dados e altere as conexões da `.env`, há uma `.env.example` na pasta raiz do projeto também para usar.
+Importe o arquivo `.sql` que se encontra na pasta raiz do projeto em seu banco de dados e altere as conexões da `.env`, há uma `.env.example` na pasta raiz do projeto também para usar.
 
 Para rodar localmente: `php artisan serve`
 
